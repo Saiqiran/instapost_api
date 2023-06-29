@@ -1,0 +1,27 @@
+<html>
+
+<body>
+    {{message}}
+    <form method="POST">
+        <table>
+            <tr>
+                <td> post_title</td>
+                <td><input type="text" name="post_title" value={{post.post_title}} /></td>
+            </tr>
+
+            <tr>
+                <td>post_body</td>
+                <td><input type="text" name="post_body" value={{post.post_body}} /></td>
+            </tr>
+
+            <tr>
+                <td> post_tags</td>
+                <td><input type="text" name="post_tags" value={{post.post_tags}} /></td>
+            </tr>
+          
+        </table>
+        <button>Update</button>
+    </form>
+</body>
+
+</html>

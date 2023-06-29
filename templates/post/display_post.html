@@ -1,0 +1,32 @@
+<html>
+
+<body>
+    {{Post}}
+    <form method="POST">
+        <table>
+            <tr>
+                <td> post_id</td>
+                <td>{{post.post_id}}</td>
+            </tr>
+
+            <tr>
+                <td> post_title</td>
+                <td>{{post.post_title}}</td>
+            </tr>
+
+            <tr>
+                <td>post_body</td>
+                <td>{{post.post_body}}</td>
+            </tr>
+
+            <tr>
+                <td> post_tags</td>
+                <td>{{post.post_tags}}</td>
+            </tr>
+        </table>
+
+        <a style="display: inline-block; border: 1px solid #ccc; background-color: #ccc; text-decoration: none; padding: 6px 10px;" href="/post/edit/{{post.post_id}}">edit</a>
+    </form>
+</body>
+
+</html>

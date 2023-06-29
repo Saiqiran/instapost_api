@@ -1,0 +1,31 @@
+<html>
+    <body>
+
+        {% if message %}
+           <div style="padding: 10px; background-color: aquamarine; border: 1px solid #ccc;"> {{message}} </div>
+        {% endif %}    
+        <table>
+            <tr>
+                <td> user_id</td>
+                <td>{{data['user_id']}}</td>
+            </tr>
+            <tr>
+                <td> user_name</td>
+                <td>{{data['user_name']}}</td>
+            </tr> 
+            <tr>
+                <td>email</td>
+                <td>{{data['email']}}</td>
+            </tr>
+            <tr>
+                <td>mobile_number</td>
+                <td>{{data['mobile_number']}}</td>
+            </tr>
+            <tr>
+                <td>status</td>
+                <td>{{data['status']}}</td>
+            </tr>
+        </table>
+        <a href="/user/profile/edit"><button>Edit</button></a>
+    </body>
+</html>

@@ -1,0 +1,56 @@
+<html>
+
+<body>
+    <form  method="POST">
+        <table>
+            <tr>
+                <td>name</td>
+                <td><input type="text" name="name" value="{{data['name']}}" /></td>
+            </tr>
+            <tr>
+                <td>email</td>
+                <td><input type="text" name="email" value="{{data['email']}}" /></td>
+            </tr>
+            <tr>
+                <td>phone</td>
+                <td><input type="integer" name="phone" value="{{data['phone']}}" /></td>
+            </tr>
+            <tr>
+                <td>salary</td>
+                <td><input type="integer" name="salary" value="{{data['salary']}}"/></td>
+            </tr>
+            <tr>
+                <td>hire_date</td>
+                <td><input type="date" name="hire_date"  value="{{data['hire_date']}}" /></td>
+            </tr>
+            <td>department</td>
+            <td>
+                {% if data['department'] =="FINANCE" %}
+                <input type="radio" name="department" value="FINANCE" checked="true" /> FINANCE &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                {% else %}
+                <input type="radio" name="department" value="FINANCE" /> FINANCE &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                {% endif %}
+
+                {% if data['department'] =="RECRUITMENT" %}
+                <input type="radio" name="department" value="RECRUITMENT" checked="true" /> RECRUITMENT &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                {% else %}
+                <input type="radio" name="department" value="RECRUITMENT" /> RECRUITMENT &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                {% endif %}
+
+                {% if data['department'] =="ACCOUNTS" %}
+                <input type="radio" name="department" value="ACCOUNTS" checked="true" /> ACCOUNTS &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                {% else %}
+                <input type="radio" name="department" value="ACCOUNTS" /> ACCOUNTS &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                {% endif %}
+
+                {% if data['department'] =="SALES" %}
+                <input type="radio" name="department" value="SALES" checked="true" /> SALES <br />
+                {% else %}
+                <input type="radio" name="department" value="SALES" /> SALES <br />
+                {% endif %}
+            </td>
+        </table>
+        <input type="submit" value="Save edit" />
+    </form>
+</body>
+</html>

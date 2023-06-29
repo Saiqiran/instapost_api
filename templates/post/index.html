@@ -1,0 +1,17 @@
+<html>
+
+<body>
+    <ul>
+        {% for post in posts %}
+            <li>Post ID: {{post.post_id}}</li>
+            <li>Post Title: {{post.post_title}}</li>
+            <li>Post Body: {{post.post_body}}</li>
+            <li>Post Tags: {{post.post_tags}}</li>
+            <li>User ID: {{post.user_id}}</li>
+            <br>
+        {% endfor %}
+    </ul>
+    
+</body>
+
+</html>

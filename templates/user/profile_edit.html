@@ -1,0 +1,40 @@
+<html>
+
+<body>
+    <form action="/user/profile/edit" method="POST">
+        <table>
+           
+            <tr>
+                <td> user_name</td>
+                <td><input type="text" name="user_name" value="{{data['user_name']}}" /></td>
+            </tr>
+            <tr>
+                <td>email</td>
+                <td><input type="text" name="email" value="{{data['email']}}" /></td>
+            </tr>
+            <tr>
+                <td>mobile_number</td>
+                <td><input type="text" name="mobile_number" value="{{data['mobile_number']}}" /></td>
+            </tr>
+            <tr>
+                <td>status</td>
+                <td> 
+                    {% if data['status'] =="ACTIVE" %}
+                        <input type="radio" name="status" value="ACTIVE" checked="true"/> Active &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    {% else %}
+                        <input type="radio" name="status" value="ACTIVE" /> Active &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    {% endif %}    
+
+                    {% if data['status'] =="INACTIVE" %}
+                        <input type="radio" name="status" value="INACTIVE" checked="true" /> Inactive<br/>
+                    {% else %}
+                        <input type="radio" name="status" value="INACTIVE" /> Inactive<br/>
+                    {% endif %}    
+                </td>
+            </tr>
+        </table>
+        <input type="submit" value="Save edit" />
+    </form>
+</body>
+
+</html>
