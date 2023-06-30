@@ -85,3 +85,26 @@ def edit_post(post_id):
 
         return redirect(url_for("post.read_post", post_id=post_id))
 
+
+@post_bp.route("/delete/<int:post_id>")
+def delete_post(post_id):
+    post = Post.query.get(post_id)
+
+    if post:
+        db.session.delete(post)
+        db.session.commit()
+        return redirect(url_for("post.delete_success"))
+    else:
+        return redirect(url_for("post.delete_error"))
+
+
+@post_bp.route("/delete/success")
+def delete_success():
+    return render_template("post/delete_success.html")
+
+@post_bp.route("/delete/error")
+def delete_error():
+    return render_template("post/delete_error.html")
+
+
+
